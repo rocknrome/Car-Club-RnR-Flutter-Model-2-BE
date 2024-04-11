@@ -1,7 +1,6 @@
-tripRoutes.js
 const express = require('express');
 const router = express.Router();
-const Trip = require('../Trip'); // Adjust the path as necessary to your Trip model
+const Trip = require('../models/Trip');
 
 // POST: Create a new trip
 router.post('/', async (req, res) => {
