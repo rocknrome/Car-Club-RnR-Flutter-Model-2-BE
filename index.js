@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./db');
+const cors = require('cors'); // Imported CORS
 require('dotenv').config();
 
 // Connect to MongoDB
@@ -10,6 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(cors()); // Enabled CORS for all origins
 app.use(bodyParser.json()); // Parses incoming JSON requests and puts the parsed data in req.body
 
 // Import routes
