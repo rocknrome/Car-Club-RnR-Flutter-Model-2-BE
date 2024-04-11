@@ -15,9 +15,13 @@ app.use(bodyParser.json()); // Parses incoming JSON requests and puts the parsed
 // Import routes
 const tripRoutes = require('./routes/tripRoutes');
 
-
 // Use Routes
-app.use('/api/trips', tripRoutes); // This mounts your trip routes on /api/trips
+app.use('/trips', tripRoutes);
+
+// Route for the root URL
+app.get('/', (req, res) => {
+  res.send("The Model 2 BE is alive");
+});
 
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
