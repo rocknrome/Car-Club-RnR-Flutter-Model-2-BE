@@ -6,7 +6,7 @@ const tripSchema = new Schema({
   description: String,
   begin_date: { type: Date, required: true },
   end_date: { type: Date, required: true },
-  participants: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  participants: [String],
   begin_point: {
     lat: Number,
     lng: Number

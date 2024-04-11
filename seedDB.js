@@ -10,7 +10,7 @@ const tripsData = [
       description: "An amazing scenic route taken to Niagra Falls",
       begin_date: new Date(2024, 4, 4),
       end_date: new Date(2024, 4, 12),
-      participants: [],
+      participants: ['Alice', 'Charlie', 'Edward', 'Julia'],
       begin_point: "Charleston, SC",
       end_point: "Niagra Falls, NY",
       image_url: "https://live.staticflickr.com/65535/53647346655_e3950c4a04.jpg",
