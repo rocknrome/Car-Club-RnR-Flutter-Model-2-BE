@@ -64,6 +64,7 @@ async function getTrip(req, res, next) {
     return res.status(500).json({ message: err.message });
   }
 
+  // Set res.trip to the retrieved trip
   res.trip = trip;
   next();
 }
